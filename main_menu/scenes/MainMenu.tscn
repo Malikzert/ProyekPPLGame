@@ -1,0 +1,141 @@
+[gd_scene load_steps=12 format=3 uid="uid://by3ldmokwd56l"]
+
+[ext_resource type="Texture2D" uid="uid://d4fk4r34wmhwo" path="res://assets/gambar/Screenshot 2025-11-13 010410.png" id="1_ej83f"]
+[ext_resource type="Script" uid="uid://deo2yqbuwuibi" path="res://main_menu/script/awan.gd" id="2_53u4j"]
+[ext_resource type="Texture2D" uid="uid://cegjio8apxysq" path="res://assets/gambar/mount storm/Stormy_Mountains_Front_Clouds.png" id="2_nb2f8"]
+[ext_resource type="Texture2D" uid="uid://b6xgn14tud0pf" path="res://assets/gambar/mount storm/Stormy_Mountains_Mountain_2.png" id="4_44lqm"]
+[ext_resource type="Texture2D" uid="uid://qfb6ge6wtykg" path="res://assets/gambar/mount storm/Stormy_Mountains_Mountain_1.png" id="5_ee1w8"]
+[ext_resource type="Texture2D" uid="uid://cvc8bskmn3v7c" path="res://assets/gambar/Screenshot_2025-11-13_044041-removebg-preview.png" id="6_5l103"]
+[ext_resource type="Texture2D" uid="uid://bsw016lnq0xyg" path="res://assets/gambar/Screenshot_2025-11-13_044238-removebg-preview.png" id="7_auoun"]
+[ext_resource type="Script" uid="uid://ci73i6ra2y1uq" path="res://main_menu/script/button.gd" id="7_oms2l"]
+[ext_resource type="Texture2D" uid="uid://d0b577p1i4swy" path="res://assets/gambar/Screenshot_2025-11-13_044325-removebg-preview.png" id="8_oms2l"]
+[ext_resource type="FontFile" uid="uid://bbyoksnyresbu" path="res://assets/fonts/PressStart2P-Regular.ttf" id="10_h84tc"]
+[ext_resource type="Script" uid="uid://bu8xiouhg1kaq" path="res://main_menu/script/title.gd" id="11_lfu2s"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_oms2l")
+
+[node name="biru" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ej83f")
+
+[node name="awan" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -536.0
+offset_top = -62.0
+offset_right = 232.0
+offset_bottom = 370.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_nb2f8")
+script = ExtResource("2_53u4j")
+
+[node name="batu" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -459.0
+offset_top = -193.0
+offset_right = 1461.0
+offset_bottom = 887.0
+texture = ExtResource("4_44lqm")
+
+[node name="batukiri" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -736.0
+offset_top = -225.0
+offset_right = 32.0
+offset_bottom = 207.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_ee1w8")
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 509.0
+offset_top = 285.0
+offset_right = 689.0
+offset_bottom = 372.0
+icon = ExtResource("6_5l103")
+flat = true
+
+[node name="SettingButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 371.0
+offset_right = 685.0
+offset_bottom = 453.0
+icon = ExtResource("7_auoun")
+flat = true
+
+[node name="ExitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 511.0
+offset_top = 453.0
+offset_right = 688.0
+offset_bottom = 537.0
+icon = ExtResource("8_oms2l")
+flat = true
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -192.0
+offset_top = 86.0
+offset_right = 192.0
+offset_bottom = 121.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0.85882354, 0, 1)
+theme_override_fonts/font = ExtResource("10_h84tc")
+text = "ECO RUNNER : TRUE NATURE
+"
+script = ExtResource("11_lfu2s")
+
+[node name="SeparatorLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -176.0
+offset_top = 120.0
+offset_right = 176.0
+offset_bottom = 155.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("10_h84tc")
+text = "----------------------
+"
+script = ExtResource("11_lfu2s")
+
+[node name="SubtitleLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -275.0
+offset_top = 150.0
+offset_right = 317.0
+offset_bottom = 199.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_fonts/font = ExtResource("10_h84tc")
+text = "LET'S START YOUR UNBELIEVABLE JOURNEY
+"
+script = ExtResource("11_lfu2s")

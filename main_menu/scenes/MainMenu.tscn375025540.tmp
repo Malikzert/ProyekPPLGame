@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://by3ldmokwd56l"]
+
+[ext_resource type="Texture2D" uid="uid://d4fk4r34wmhwo" path="res://assets/gambar/Screenshot 2025-11-13 010410.png" id="1_ej83f"]
+[ext_resource type="Script" uid="uid://deo2yqbuwuibi" path="res://main_menu/script/awan.gd" id="2_53u4j"]
+[ext_resource type="Texture2D" uid="uid://cegjio8apxysq" path="res://assets/gambar/mount storm/Stormy_Mountains_Front_Clouds.png" id="2_nb2f8"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="biru" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ej83f")
+
+[node name="awan" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -768.0
+offset_top = -89.0
+offset_bottom = 343.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_nb2f8")
+script = ExtResource("2_53u4j")
+speed = null
+
+[node name="awan2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1357.0
+offset_top = -90.0
+offset_right = -589.0
+offset_bottom = 342.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_nb2f8")
+script = ExtResource("2_53u4j")
+speed = null

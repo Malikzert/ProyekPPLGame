@@ -1,0 +1,72 @@
+[gd_scene load_steps=5 format=3 uid="uid://14d1kjco1ebw"]
+
+[ext_resource type="Script" uid="uid://cm2x8fsbbsrng" path="res://main_menu/script/exit_confirm.gd" id="1_58l4i"]
+[ext_resource type="FontFile" uid="uid://bbyoksnyresbu" path="res://assets/fonts/PressStart2P-Regular.ttf" id="2_0i4ta"]
+[ext_resource type="Texture2D" uid="uid://bjbwqby1ejcv1" path="res://assets/gambar/bg exitconf.jpg" id="2_i3adc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1kjfo"]
+texture = ExtResource("2_i3adc")
+
+[node name="ExitConfirm" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_58l4i")
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(0.85454595, 0.8505053, 0.85358566, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 288.0
+offset_top = 187.0
+offset_right = -252.0
+offset_bottom = -139.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_1kjfo")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -224.0
+offset_top = 40.0
+offset_right = 224.0
+offset_bottom = 63.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_0i4ta")
+text = "\"Are you sure want to quit?\""
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -194.0
+offset_top = 109.0
+offset_right = 194.0
+offset_bottom = 149.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="YesButton" type="Button" parent="Panel/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8745098, 0.30980393, 0.8745098, 1)
+theme_override_colors/icon_hover_color = Color(1, 0, 0.17254902, 1)
+theme_override_fonts/font = ExtResource("2_0i4ta")
+text = "yeah, iam sure"
+
+[node name="NoButton" type="Button" parent="Panel/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.8745098, 0.8745098, 1)
+theme_override_colors/icon_hover_color = Color(0.055133447, 0.61577564, 0.16923541, 1)
+theme_override_fonts/font = ExtResource("2_0i4ta")
+text = "Nope dude"
