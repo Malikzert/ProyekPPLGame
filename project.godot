@@ -14,3 +14,34 @@ config/name="ppl"
 run/main_scene="uid://by3ldmokwd56l"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+LevelLoader="*res://main_menu/script/LevelLoader.gd"
+GlobalSettings="*res://main_menu/script/GlobalSettings.gd"
+
+[file_customization]
+
+folder_colors={
+"res://assets/": "red",
+"res://assets/fonts/": "red",
+"res://assets/gambar/": "red",
+"res://main_menu/scenes/": "green",
+"res://main_menu/script/": "green",
+"res://stage 1/level 1-1/": "teal",
+"res://stage 1/level 1-2/": "teal",
+"res://stage 1/level 1-3/": "teal",
+"res://stage 1/level 1-4/": "teal",
+"res://stage 1/level 1-5/": "teal",
+"res://stage 2/": "purple",
+"res://stage 2/level 2-1/": "purple",
+"res://stage 2/level 2-2/": "purple",
+"res://stage 2/level 2-3/": "purple",
+"res://stage 2/level 2-4/": "purple",
+"res://stage 2/level 2-5/": "purple",
+"res://stage 3/": "blue"
+}
+
+[rendering]
+
+quality/adjustment_brightness=38.0

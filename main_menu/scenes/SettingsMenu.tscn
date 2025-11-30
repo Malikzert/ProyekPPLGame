@@ -1,4 +1,20 @@
-[gd_scene format=3 uid="uid://bj0815eq37lo1"]
+[gd_scene load_steps=16 format=3 uid="uid://bj0815eq37lo1"]
+
+[ext_resource type="Script" uid="uid://cvo1630cfp0vm" path="res://main_menu/script/settings_menu.gd" id="1_2sk06"]
+[ext_resource type="FontFile" uid="uid://bbyoksnyresbu" path="res://assets/fonts/PressStart2P-Regular.ttf" id="1_011pw"]
+[ext_resource type="Script" uid="uid://bu8xiouhg1kaq" path="res://main_menu/script/title.gd" id="2_xyj36"]
+[ext_resource type="Texture2D" uid="uid://d4fk4r34wmhwo" path="res://assets/gambar/Screenshot 2025-11-13 010410.png" id="3_7tp43"]
+[ext_resource type="Texture2D" uid="uid://cegjio8apxysq" path="res://assets/gambar/mount storm/Stormy_Mountains_Front_Clouds.png" id="4_wnh2l"]
+[ext_resource type="Script" uid="uid://deo2yqbuwuibi" path="res://main_menu/script/awan.gd" id="5_2sk06"]
+[ext_resource type="Texture2D" uid="uid://qfb6ge6wtykg" path="res://assets/gambar/mount storm/Stormy_Mountains_Mountain_1.png" id="6_qqyq3"]
+[ext_resource type="Texture2D" uid="uid://c4dv31ccd8o07" path="res://assets/gambar/Screenshot_2025-11-27_204346-removebg-preview.png" id="7_wnh2l"]
+[ext_resource type="Texture2D" uid="uid://bvptdwm38s5kk" path="res://assets/gambar/Screenshot_2025-11-30_205755-removebg-preview.png" id="9_s3cgk"]
+[ext_resource type="Texture2D" uid="uid://dni5056nw7ygv" path="res://assets/gambar/Screenshot_2025-11-30_205745-removebg-preview.png" id="10_xq6ye"]
+[ext_resource type="Texture2D" uid="uid://382ovtomtvyk" path="res://assets/gambar/Volume Mute2.png" id="11_crhpb"]
+[ext_resource type="Texture2D" uid="uid://cxqpewwjdgkro" path="res://assets/gambar/Volume Mute3.png" id="12_cdcuf"]
+[ext_resource type="AudioStream" uid="uid://ci6qnrdjbbrnq" path="res://assets/music/retro-lounge-389644.mp3" id="13_crhpb"]
+[ext_resource type="AudioStream" uid="uid://crc0gd7af2yut" path="res://assets/music/retro-game-arcade-236133.mp3" id="14_cdcuf"]
+[ext_resource type="Script" uid="uid://br2oi54up1jeq" path="res://main_menu/script/GlobalSettings.gd" id="15_cdcuf"]
 
 [node name="SettingsMenu" type="Control"]
 layout_mode = 3
@@ -7,3 +23,232 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_2sk06")
+
+[node name="Volume" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -192.0
+offset_top = 172.0
+offset_right = 192.0
+offset_bottom = 207.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0.85882354, 0, 1)
+theme_override_fonts/font = ExtResource("1_011pw")
+text = "ECO RUNNER : TRUE NATURE
+"
+script = ExtResource("2_xyj36")
+
+[node name="biru" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_7tp43")
+
+[node name="awan" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -536.0
+offset_top = -62.0
+offset_right = 232.0
+offset_bottom = 370.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_wnh2l")
+script = ExtResource("5_2sk06")
+
+[node name="batukiri" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -815.0
+offset_top = -117.0
+offset_right = -47.0
+offset_bottom = 315.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_qqyq3")
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -192.0
+offset_top = 86.0
+offset_right = 192.0
+offset_bottom = 121.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0.85882354, 0, 1)
+theme_override_fonts/font = ExtResource("1_011pw")
+text = "ECO RUNNER : TRUE NATURE
+"
+script = ExtResource("2_xyj36")
+
+[node name="SeparatorLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -176.0
+offset_top = 120.0
+offset_right = 176.0
+offset_bottom = 155.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_011pw")
+text = "----------------------
+"
+script = ExtResource("2_xyj36")
+
+[node name="SeparatorLabel" type="Label" parent="SeparatorLabel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -237.0
+offset_top = 244.0
+offset_right = 115.0
+offset_bottom = 279.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_011pw")
+text = "Brightness"
+script = ExtResource("2_xyj36")
+
+[node name="SeparatorLabel2" type="Label" parent="SeparatorLabel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -236.0
+offset_top = 147.0
+offset_right = 116.0
+offset_bottom = 182.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_011pw")
+text = "Volume"
+script = ExtResource("2_xyj36")
+
+[node name="SubtitleLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -275.0
+offset_top = 150.0
+offset_right = 317.0
+offset_bottom = 199.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_011pw")
+text = "Setup your setting to enjoy Your gameplay"
+script = ExtResource("2_xyj36")
+
+[node name="MusicVolumeSlider" type="HSlider" parent="."]
+modulate = Color(0, 1, 0.105882354, 1)
+layout_mode = 0
+offset_left = 317.0
+offset_top = 315.0
+offset_right = 1016.0
+offset_bottom = 331.0
+
+[node name="BrightnessSlider" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 318.0
+offset_top = 412.0
+offset_right = 1018.0
+offset_bottom = 428.0
+
+[node name="back" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 292.0
+offset_bottom = 206.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("7_wnh2l")
+stretch_mode = 0
+
+[node name="Brightness" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -192.0
+offset_top = 86.0
+offset_right = 192.0
+offset_bottom = 121.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0.85882354, 0, 1)
+theme_override_fonts/font = ExtResource("1_011pw")
+text = "ECO RUNNER : TRUE NATURE
+"
+script = ExtResource("2_xyj36")
+
+[node name="logo cerah" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1032.0
+offset_top = 384.0
+offset_right = 1407.0
+offset_bottom = 736.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_s3cgk")
+
+[node name="logo crah2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 384.0
+offset_right = 585.0
+offset_bottom = 739.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("10_xq6ye")
+
+[node name="logo vlm" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 304.00003
+offset_right = 618.0
+offset_bottom = 656.0
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("11_crhpb")
+
+[node name="logo vlm2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1048.0001
+offset_top = 303.00003
+offset_right = 1423.0001
+offset_bottom = 655.0
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("12_cdcuf")
+
+[node name="MusicDropdown" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 325.0
+offset_top = 492.0
+offset_right = 650.0
+offset_bottom = 541.0
+
+[node name="background1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_crhpb")
+parameters/looping = false
+
+[node name="background2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_cdcuf")
+
+[node name="GlobalSettings" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("15_cdcuf")
+
+[node name="background1" type="AudioStreamPlayer" parent="GlobalSettings"]
+stream = ExtResource("13_crhpb")
+parameters/looping = false
+
+[node name="background2" type="AudioStreamPlayer" parent="GlobalSettings"]
+stream = ExtResource("14_cdcuf")
