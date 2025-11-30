@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfx8t7d67ydnm"]
+
+[ext_resource type="Texture2D" uid="uid://d3uv8it8tp2e7" path="res://assets/swamp-asset/1 Tiles/Tile_39.png" id="1_lr046"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3abu4"]
+size = Vector2(32, 14.5)
+
+[node name="platform" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_lr046")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -9)
+shape = SubResource("RectangleShape2D_3abu4")
+one_way_collision = true
