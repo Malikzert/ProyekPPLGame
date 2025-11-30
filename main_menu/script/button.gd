@@ -9,6 +9,9 @@ func _ready():
 	StartButton = $StartButton
 	SettingButton = $SettingButton
 	ExitButton = $ExitButton
+	modulate = Color(GlobalSettings.brightness, GlobalSettings.brightness, GlobalSettings.brightness, 1)
+	if GlobalSettings.audio_player and not GlobalSettings.audio_player.playing:
+		GlobalSettings.audio_player.play()
 
 	# Cek apakah semua tombol ditemukan
 	if not StartButton:
@@ -24,10 +27,10 @@ func _ready():
 	ExitButton.pressed.connect(_on_ExitButton_pressed)
 
 func _on_StartButton_pressed():
-	get_tree().change_scene_to_file("res://stage1/level1/Stage1_Level1.tscn")
+	get_tree().change_scene_to_file("res://main_menu/scenes/StageSelect.tscn")
 
 func _on_SettingButton_pressed():
-	print("Tombol Setting ditekan")
+	get_tree().change_scene_to_file("res://main_menu/scenes/SettingsMenu.tscn")
 
 func _on_ExitButton_pressed():
 	var confirm = preload("res://main_menu/scenes/ExitConfirm.tscn").instantiate()

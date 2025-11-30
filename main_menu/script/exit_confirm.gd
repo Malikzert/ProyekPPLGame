@@ -7,7 +7,7 @@ func _ready():
 	# Hubungkan tombol
 	yesbutton.pressed.connect(_on_yes_pressed)
 	nobutton.pressed.connect(_on_no_pressed)
-
+	modulate = Color(GlobalSettings.brightness, GlobalSettings.brightness, GlobalSettings.brightness, 1)
 func _on_yes_pressed():
 	get_tree().quit()  # keluar dari game
 
