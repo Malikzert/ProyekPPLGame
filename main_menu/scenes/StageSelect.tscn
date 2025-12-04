@@ -1,4 +1,15 @@
-[gd_scene format=3 uid="uid://c5yoeank80wyq"]
+[gd_scene load_steps=11 format=3 uid="uid://c5yoeank80wyq"]
+
+[ext_resource type="Texture2D" uid="uid://d4fk4r34wmhwo" path="res://assets/gambar/Screenshot 2025-11-13 010410.png" id="1_ohec5"]
+[ext_resource type="Texture2D" uid="uid://cegjio8apxysq" path="res://assets/gambar/mount storm/Stormy_Mountains_Front_Clouds.png" id="2_k0gfd"]
+[ext_resource type="Script" uid="uid://deo2yqbuwuibi" path="res://main_menu/script/awan.gd" id="3_74cqo"]
+[ext_resource type="FontFile" uid="uid://bbyoksnyresbu" path="res://assets/fonts/PressStart2P-Regular.ttf" id="4_vsdgq"]
+[ext_resource type="Script" uid="uid://bu8xiouhg1kaq" path="res://main_menu/script/title.gd" id="5_vvapd"]
+[ext_resource type="Texture2D" uid="uid://bwkidooeibuaw" path="res://assets/gambar/desert10__r1738402061.png" id="6_74lq1"]
+[ext_resource type="Texture2D" uid="uid://d2t0bcoo4vf0q" path="res://assets/gambar/mount storm/Stormy_Mountains_1920x1080.png" id="7_k0gfd"]
+[ext_resource type="Script" uid="uid://b1wmaqcpkvuu8" path="res://main_menu/script/stage.gd" id="7_vsdgq"]
+[ext_resource type="Texture2D" uid="uid://cjyi7rguv24xa" path="res://assets/gambar/7481714.jpg" id="8_74cqo"]
+[ext_resource type="Texture2D" uid="uid://c4dv31ccd8o07" path="res://assets/gambar/Screenshot_2025-11-27_204346-removebg-preview.png" id="10_74lq1"]
 
 [node name="StageSelect" type="Control"]
 layout_mode = 3
@@ -7,3 +18,158 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("7_vsdgq")
+
+[node name="biru" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ohec5")
+
+[node name="awan" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -517.0
+offset_top = -61.0
+offset_right = 251.0
+offset_bottom = 371.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_k0gfd")
+script = ExtResource("3_74cqo")
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -192.0
+offset_top = 86.0
+offset_right = 192.0
+offset_bottom = 121.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0.85882354, 0, 1)
+theme_override_fonts/font = ExtResource("4_vsdgq")
+text = "ECO RUNNER : TRUE NATURE
+"
+script = ExtResource("5_vvapd")
+
+[node name="SeparatorLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -176.0
+offset_top = 120.0
+offset_right = 176.0
+offset_bottom = 155.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_vsdgq")
+text = "----------------------
+"
+script = ExtResource("5_vvapd")
+
+[node name="SubtitleLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -459.0
+offset_top = 150.0
+offset_right = 501.0
+offset_bottom = 199.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_vsdgq")
+text = "there is which is 3 season of game select if they not locked"
+script = ExtResource("5_vvapd")
+
+[node name="SubtitleLabel" type="Label" parent="SubtitleLabel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -438.0
+offset_top = 441.0
+offset_right = -282.0
+offset_bottom = 490.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_vsdgq")
+text = "SEASON I
+"
+script = ExtResource("5_vvapd")
+
+[node name="SubtitleLabel" type="Label" parent="SubtitleLabel/SubtitleLabel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 279.0
+offset_top = 2.0
+offset_right = 429.0
+offset_bottom = 51.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_vsdgq")
+text = "SEASON 2"
+script = ExtResource("5_vvapd")
+
+[node name="SubtitleLabel2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 285.0
+offset_top = 590.0
+offset_right = 435.0
+offset_bottom = 639.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_vsdgq")
+text = "SEASON 3"
+script = ExtResource("5_vvapd")
+
+[node name="stg1" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 319.00003
+offset_right = 928.0
+offset_bottom = 1246.5863
+scale = Vector2(0.29, 0.29)
+texture_normal = ExtResource("6_74lq1")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="stg2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 455.0
+offset_top = 319.0
+offset_right = 2375.0
+offset_bottom = 2479.0
+scale = Vector2(0.125, 0.125)
+texture_normal = ExtResource("7_k0gfd")
+stretch_mode = 0
+
+[node name="stg3" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 319.0
+offset_right = 3800.0
+offset_bottom = 3644.0
+scale = Vector2(0.08, 0.08)
+texture_normal = ExtResource("8_74cqo")
+stretch_mode = 0
+
+[node name="back" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 292.0
+offset_bottom = 206.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("10_74lq1")
+stretch_mode = 0

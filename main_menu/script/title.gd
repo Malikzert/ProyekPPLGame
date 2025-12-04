@@ -9,7 +9,7 @@ var animating := true
 func _ready():
 	# simpan posisi akhir (target)
 	target_pos = position
-	
+	modulate = Color(GlobalSettings.brightness, GlobalSettings.brightness, GlobalSettings.brightness, 1)
 	# mulai sedikit lebih tinggi dan transparan
 	start_pos = position - Vector2(0, 30)
 	position = start_pos

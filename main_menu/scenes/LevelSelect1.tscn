@@ -1,0 +1,198 @@
+[gd_scene load_steps=7 format=3 uid="uid://dd21lpsk4da23"]
+
+[ext_resource type="Texture2D" uid="uid://bwkidooeibuaw" path="res://assets/gambar/desert10__r1738402061.png" id="1_5f8ry"]
+[ext_resource type="Script" uid="uid://xcjrv6f5112c" path="res://main_menu/script/level_select_1.gd" id="1_h0m1v"]
+[ext_resource type="FontFile" uid="uid://bbyoksnyresbu" path="res://assets/fonts/PressStart2P-Regular.ttf" id="2_5f8ry"]
+[ext_resource type="Script" uid="uid://bu8xiouhg1kaq" path="res://main_menu/script/title.gd" id="3_encuu"]
+[ext_resource type="Texture2D" uid="uid://c4dv31ccd8o07" path="res://assets/gambar/Screenshot_2025-11-27_204346-removebg-preview.png" id="4_5f8ry"]
+[ext_resource type="Texture2D" uid="uid://cecnreopswiwo" path="res://assets/gambar/Screenshot 2025-11-27 210719.png" id="5_encuu"]
+
+[node name="LevelSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h0m1v")
+
+[node name="biru2" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.13333334)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_5f8ry")
+
+[node name="TitleLabel2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -192.0
+offset_top = 86.0
+offset_right = 192.0
+offset_bottom = 121.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0.85882354, 0, 1)
+theme_override_fonts/font = ExtResource("2_5f8ry")
+text = "ECO RUNNER : TRUE NATURE
+"
+script = ExtResource("3_encuu")
+
+[node name="SeparatorLabel2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -176.0
+offset_top = 120.0
+offset_right = 176.0
+offset_bottom = 155.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_5f8ry")
+text = "----------------------
+"
+script = ExtResource("3_encuu")
+
+[node name="SubtitleLabel2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -275.0
+offset_top = 150.0
+offset_right = 317.0
+offset_bottom = 199.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_5f8ry")
+text = "you has been picking season 1 “savanna dessert”"
+script = ExtResource("3_encuu")
+
+[node name="back" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 292.0
+offset_bottom = 206.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_5f8ry")
+stretch_mode = 0
+
+[node name="LevelButtons" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="level1" type="TextureButton" parent="LevelButtons"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 400.0
+offset_right = 192.0
+offset_bottom = 479.0
+texture_normal = ExtResource("5_encuu")
+
+[node name="level2" type="TextureButton" parent="LevelButtons"]
+layout_mode = 0
+offset_left = 305.0
+offset_top = 400.0
+offset_right = 387.0
+offset_bottom = 479.0
+texture_normal = ExtResource("5_encuu")
+
+[node name="level3" type="TextureButton" parent="LevelButtons"]
+layout_mode = 0
+offset_left = 519.0
+offset_top = 400.0
+offset_right = 601.0
+offset_bottom = 479.0
+texture_normal = ExtResource("5_encuu")
+
+[node name="level4" type="TextureButton" parent="LevelButtons"]
+layout_mode = 0
+offset_left = 746.0
+offset_top = 400.0
+offset_right = 828.0
+offset_bottom = 479.0
+texture_normal = ExtResource("5_encuu")
+
+[node name="level5" type="TextureButton" parent="LevelButtons"]
+layout_mode = 0
+offset_left = 948.0
+offset_top = 400.0
+offset_right = 1030.0
+offset_bottom = 479.0
+texture_normal = ExtResource("5_encuu")
+
+[node name="nama" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -450.0
+offset_top = 488.0
+offset_right = -402.0
+offset_bottom = 523.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_5f8ry")
+text = "1-1"
+script = ExtResource("3_encuu")
+
+[node name="SeparatorLabel3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -252.0
+offset_top = 485.0
+offset_right = -204.0
+offset_bottom = 520.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_5f8ry")
+text = "1-2"
+script = ExtResource("3_encuu")
+
+[node name="SeparatorLabel4" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -39.0
+offset_top = 482.0
+offset_right = 9.0
+offset_bottom = 517.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_5f8ry")
+text = "1-3
+"
+script = ExtResource("3_encuu")
+
+[node name="SeparatorLabel5" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 188.0
+offset_top = 481.0
+offset_right = 236.0
+offset_bottom = 516.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_5f8ry")
+text = "1-4
+"
+script = ExtResource("3_encuu")
+
+[node name="SeparatorLabel6" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 391.0
+offset_top = 481.0
+offset_right = 439.0
+offset_bottom = 516.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_5f8ry")
+text = "1-5"
+script = ExtResource("3_encuu")

@@ -9,7 +9,9 @@ script/source = "extends Area2D
 
 
 func _on_body_entered(body: Node2D) -> void:
-	print('You Got A key')
+	if body.name == \"Player\":
+		body.has_key = true
+		print('You Got A key')
 	queue_free()
 "
 

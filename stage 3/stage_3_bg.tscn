@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cepvjstshxtc0"]
+
+[ext_resource type="Texture2D" uid="uid://bbw53tnbe46s2" path="res://assets/swamp-asset/2 Background/Layers/2.png" id="1_jbtcw"]
+[ext_resource type="Texture2D" uid="uid://dgdbfpdn3764o" path="res://assets/swamp-asset/2 Background/Layers/4.png" id="2_eow2v"]
+
+[node name="Stage3Bg" type="Node2D"]
+
+[node name="Dark_Tree" type="Parallax2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Dark_Tree"]
+texture = ExtResource("1_jbtcw")
+
+[node name="swamp" type="Parallax2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="swamp"]
+position = Vector2(1, 0)
+texture = ExtResource("2_eow2v")
