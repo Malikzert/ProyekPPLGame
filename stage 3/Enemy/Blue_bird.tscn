@@ -1,0 +1,94 @@
+[gd_scene load_steps=15 format=3 uid="uid://dw1p0r7crishd"]
+
+[ext_resource type="Script" uid="uid://t2jkso6n0lq5" path="res://stage 3/Enemy/blue_bird.gd" id="1_d2uin"]
+[ext_resource type="Texture2D" uid="uid://mke2iihn41uq" path="res://assets/Enemies/BlueBird/Flying (32x32).png" id="1_ivov1"]
+[ext_resource type="PackedScene" uid="uid://d2ovwm7fu0e77" path="res://main_menu/scenes/kill_zone.tscn" id="2_vbr1q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbr1q"]
+atlas = ExtResource("1_ivov1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2uin"]
+atlas = ExtResource("1_ivov1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_safky"]
+atlas = ExtResource("1_ivov1")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_begsg"]
+atlas = ExtResource("1_ivov1")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1jgy"]
+atlas = ExtResource("1_ivov1")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5syl2"]
+atlas = ExtResource("1_ivov1")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfyay"]
+atlas = ExtResource("1_ivov1")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhbpl"]
+atlas = ExtResource("1_ivov1")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_si5r5"]
+atlas = ExtResource("1_ivov1")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0esam"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbr1q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2uin")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_safky")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_begsg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1jgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5syl2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kfyay")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhbpl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_si5r5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vbr1q"]
+size = Vector2(27, 21)
+
+[node name="Enemy_Swan" type="Node2D"]
+script = ExtResource("1_d2uin")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0esam")
+autoplay = "default"
+frame_progress = 0.20947444
+
+[node name="Kill_Zone" parent="." instance=ExtResource("2_vbr1q")]
+position = Vector2(0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill_Zone"]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_vbr1q")
