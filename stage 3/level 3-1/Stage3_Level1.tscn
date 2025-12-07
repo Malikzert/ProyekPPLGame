@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://cexkhrtel524y"]
+[gd_scene load_steps=13 format=4 uid="uid://cexkhrtel524y"]
 
 [ext_resource type="PackedScene" uid="uid://ctfd4fjb2avnw" path="res://stage 3/Player/Player.tscn" id="1_egygj"]
 [ext_resource type="Texture2D" uid="uid://b8cf2r0tb48yk" path="res://assets/brackeys_platformer_assets/sprites/world_tileset.png" id="2_0vps2"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://beu1wkjhq6xy3" path="res://stage 3/Enemy/node_2d.tscn" id="6_stjy4"]
 [ext_resource type="PackedScene" uid="uid://cy1odsblyb6i1" path="res://stage 3/Enemy/chain_show.tscn" id="7_e5h0i"]
 [ext_resource type="PackedScene" uid="uid://cqjpxepgluhgu" path="res://stage 3/Enemy/spike.tscn" id="8_n8awh"]
+[ext_resource type="PackedScene" uid="uid://co62n2pgae45u" path="res://stage 3/Key_Item/door_next_stage.tscn" id="9_m7hsc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s2ffg"]
 texture = ExtResource("2_0vps2")
@@ -155,7 +156,7 @@ sources/0 = SubResource("TileSetAtlasSource_s2ffg")
 [node name="Stage3Level1" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_egygj")]
-position = Vector2(27, -28)
+position = Vector2(48, -166)
 
 [node name="Camera2D" parent="Player" instance=ExtResource("2_s2ffg")]
 position = Vector2(-7, -10)
@@ -270,3 +271,9 @@ rotation = -3.129651
 [node name="Spike17" parent="." instance=ExtResource("8_n8awh")]
 position = Vector2(249, -233)
 rotation = 3.1415927
+
+[node name="Door" parent="." instance=ExtResource("9_m7hsc")]
+z_index = -1
+position = Vector2(-24, -145)
+scale = Vector2(2, 2)
+next_stage_path = "res://stage 3/level 3-2/Stage3_Level2.tscn"

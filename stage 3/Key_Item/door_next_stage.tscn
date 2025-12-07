@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://co62n2pgae45u"]
+
+[ext_resource type="Script" uid="uid://kr2eylkvxnv7" path="res://stage 3/Key_Item/door_next_stage.gd" id="1_10l0n"]
+[ext_resource type="Texture2D" uid="uid://dcius8jmgfcf1" path="res://assets/Medieval_Castle_Asset_Pack/Decorations/door.png" id="1_elgjl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ejm1u"]
+size = Vector2(14, 22)
+
+[node name="Door" type="Node2D"]
+script = ExtResource("1_10l0n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -11)
+scale = Vector2(0.35518295, 0.36652547)
+texture = ExtResource("1_elgjl")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -11)
+shape = SubResource("RectangleShape2D_ejm1u")
