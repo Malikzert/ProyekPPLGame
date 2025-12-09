@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://b1ktwo5enq5t0"]
+[gd_scene load_steps=34 format=4 uid="uid://b1ktwo5enq5t0"]
 
 [ext_resource type="PackedScene" uid="uid://ctfd4fjb2avnw" path="res://stage 3/Player/Player.tscn" id="1_1aqti"]
 [ext_resource type="PackedScene" uid="uid://bygmfbo6uawry" path="res://stage 3/camera_2d.tscn" id="2_4iqqq"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://d2ovwm7fu0e77" path="res://main_menu/scenes/kill_zone.tscn" id="7_ghevf"]
 [ext_resource type="PackedScene" uid="uid://beu1wkjhq6xy3" path="res://stage 3/Enemy/node_2d.tscn" id="10_4iqqq"]
 [ext_resource type="PackedScene" uid="uid://cnur244omvsa5" path="res://stage 3/Key_Item/door_1.tscn" id="10_uux7j"]
+[ext_resource type="PackedScene" uid="uid://5vj00nkpxyu1" path="res://stage 3/Background/parallax_background.tscn" id="12_hwhih"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kh737"]
 texture = ExtResource("3_hq1n7")
@@ -286,6 +287,21 @@ _data = {
 &"move_right": SubResource("Animation_w0rfe")
 }
 
+[sub_resource type="Animation" id="Animation_an08s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(552, 135)]
+}
+
 [sub_resource type="Animation" id="Animation_hwhih"]
 resource_name = "newasda"
 length = 4.0
@@ -303,7 +319,13 @@ tracks/0/keys = {
 "values": [Vector2(552, 135), Vector2(938, 135), Vector2(554, 135)]
 }
 
-[sub_resource type="Animation" id="Animation_an08s"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7ljm6"]
+_data = {
+&"RESET": SubResource("Animation_an08s"),
+&"newasda": SubResource("Animation_hwhih")
+}
+
+[sub_resource type="Animation" id="Animation_w8cqe"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -315,13 +337,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(552, 135)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_7ljm6"]
-_data = {
-&"RESET": SubResource("Animation_an08s"),
-&"newasda": SubResource("Animation_hwhih")
+"values": [Vector2(789, 100)]
 }
 
 [sub_resource type="Animation" id="Animation_gj36y"]
@@ -341,7 +357,13 @@ tracks/0/keys = {
 "values": [Vector2(720, 100), Vector2(1098, 100), Vector2(720, 100)]
 }
 
-[sub_resource type="Animation" id="Animation_w8cqe"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v1gxu"]
+_data = {
+&"RESET": SubResource("Animation_w8cqe"),
+&"new_animation": SubResource("Animation_gj36y")
+}
+
+[sub_resource type="Animation" id="Animation_v1gxu"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -353,13 +375,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(789, 100)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_v1gxu"]
-_data = {
-&"RESET": SubResource("Animation_w8cqe"),
-&"new_animation": SubResource("Animation_gj36y")
+"values": [Vector2(585, 39)]
 }
 
 [sub_resource type="Animation" id="Animation_7ljm6"]
@@ -377,21 +393,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(585, 39), Vector2(846, 39), Vector2(585, 39)]
-}
-
-[sub_resource type="Animation" id="Animation_v1gxu"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(585, 39)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_w3n04"]
@@ -509,3 +510,7 @@ collision_layer = 128
 
 [node name="Enemy4" parent="." instance=ExtResource("10_4iqqq")]
 position = Vector2(-172, 106)
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("12_hwhih")]
+position = Vector2(681, -10)
+scale = Vector2(0.6, 0.6)

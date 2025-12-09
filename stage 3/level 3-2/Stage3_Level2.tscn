@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://c1nhb57odhwkw"]
+[gd_scene load_steps=19 format=4 uid="uid://c1nhb57odhwkw"]
 
 [ext_resource type="PackedScene" uid="uid://5vj00nkpxyu1" path="res://stage 3/Background/parallax_background.tscn" id="1_kxatl"]
 [ext_resource type="Texture2D" uid="uid://b8cf2r0tb48yk" path="res://assets/brackeys_platformer_assets/sprites/world_tileset.png" id="1_t0gcq"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cnur244omvsa5" path="res://stage 3/Key_Item/door_1.tscn" id="8_ecifj"]
 [ext_resource type="PackedScene" uid="uid://cy1odsblyb6i1" path="res://stage 3/Enemy/chain_show.tscn" id="9_7mvaq"]
 [ext_resource type="PackedScene" uid="uid://beu1wkjhq6xy3" path="res://stage 3/Enemy/node_2d.tscn" id="10_kxatl"]
+[ext_resource type="PackedScene" uid="uid://co62n2pgae45u" path="res://stage 3/Key_Item/door_next_stage.tscn" id="12_bffj2"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ow4x6"]
 normal = Vector2(0.009258863, -0.99995714)
@@ -202,6 +203,7 @@ position = Vector2(577, -169)
 scale = Vector2(0.6, 0.6)
 
 [node name="Kill_Zone" parent="." instance=ExtResource("1_xv65w")]
+position = Vector2(668, 143)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kill_Zone"]
 shape = SubResource("WorldBoundaryShape2D_ow4x6")
@@ -212,7 +214,7 @@ tile_map_data = PackedByteArray("AAAAAP3/AAAHAAEAAAABAP3/AAAHAAEAAAACAP3/AAAHAAE
 tile_set = SubResource("TileSet_wohnf")
 
 [node name="Player" parent="." instance=ExtResource("2_xv65w")]
-position = Vector2(51, -76)
+position = Vector2(18, -68)
 
 [node name="Camera2D" parent="Player" instance=ExtResource("3_ow4x6")]
 position = Vector2(0, -87)
@@ -256,3 +258,9 @@ position = Vector2(1048, -203)
 
 [node name="Enemy2" parent="." instance=ExtResource("10_kxatl")]
 position = Vector2(745, -235)
+
+[node name="Door" parent="." instance=ExtResource("12_bffj2")]
+position = Vector2(1209, -241)
+scale = Vector2(2, 2)
+next_stage_path = "res://stage 3/level 3-3/Stage3_Level3.tscn"
+delay_before_enter = 1.0
