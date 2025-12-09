@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bo1pdf2by743f"]
+
+[ext_resource type="Script" uid="uid://c2wvq8r0yljq" path="res://main_menu/HealtUI.gd" id="1_pedu3"]
+[ext_resource type="Script" uid="uid://fv2qwgnnl3od" path="res://main_menu/healt_ui.gd" id="2_pedu3"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+layer = 10
+script = ExtResource("1_pedu3")
+
+[node name="HealtUI" type="Control" parent="."]
+modulate = Color(0.8117995, 0.7328488, 0.31780863, 1)
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_pedu3")
+
+[node name="HeartsContainer" type="HBoxContainer" parent="HealtUI"]
+z_index = 4096
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 116.0
+offset_bottom = 60.0
+metadata/_edit_use_anchors_ = true
