@@ -167,7 +167,7 @@ position = Vector2(420, -115)
 position = Vector2(-2, 12)
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("11_ssetg")]
-position = Vector2(778, -153)
+position = Vector2(779, -153)
 scale = Vector2(0.8, 0.8)
 
 [node name="Enemy_Pig" parent="." instance=ExtResource("4_oipri")]
