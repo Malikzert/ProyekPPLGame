@@ -1,0 +1,86 @@
+[gd_scene load_steps=11 format=3 uid="uid://5vj00nkpxyu1"]
+
+[ext_resource type="Texture2D" uid="uid://bi0xq4trj21p2" path="res://assets/Parallax Forest Background (Seamless)/Parallax Forest Background - Blue/01_Mist.png" id="1_g5lxi"]
+[ext_resource type="Texture2D" uid="uid://dlim87girdxtr" path="res://assets/Parallax Forest Background (Seamless)/Parallax Forest Background - Blue/10_Sky.png" id="1_lxb4d"]
+[ext_resource type="Texture2D" uid="uid://hvuuxb13abk4" path="res://assets/Parallax Forest Background (Seamless)/Parallax Forest Background - Blue/02_Bushes.png" id="2_3c8kk"]
+[ext_resource type="Texture2D" uid="uid://c6g5argcpjral" path="res://assets/Parallax Forest Background (Seamless)/Parallax Forest Background - Blue/03_Particles.png" id="3_ob266"]
+[ext_resource type="Texture2D" uid="uid://bwygc66w05jyy" path="res://assets/Parallax Forest Background (Seamless)/Parallax Forest Background - Blue/04_Forest.png" id="4_0magv"]
+[ext_resource type="Texture2D" uid="uid://i1nn6xguursr" path="res://assets/Parallax Forest Background (Seamless)/Parallax Forest Background - Blue/05_Particles.png" id="5_1sv6d"]
+[ext_resource type="Texture2D" uid="uid://bcifiuet1phki" path="res://assets/Parallax Forest Background (Seamless)/Parallax Forest Background - Blue/06_Forest.png" id="6_xatck"]
+[ext_resource type="Texture2D" uid="uid://de8whk026tqo5" path="res://assets/Parallax Forest Background (Seamless)/Parallax Forest Background - Blue/07_Forest.png" id="7_n1iae"]
+[ext_resource type="Texture2D" uid="uid://bmbob534oek78" path="res://assets/Parallax Forest Background (Seamless)/Parallax Forest Background - Blue/08_Forest.png" id="8_4x083"]
+[ext_resource type="Texture2D" uid="uid://bf3v6incap1on" path="res://assets/Parallax Forest Background (Seamless)/Parallax Forest Background - Blue/09_Forest.png" id="9_x6o38"]
+
+[node name="ParallaxBackground" type="Node2D"]
+z_index = -4096
+
+[node name="Sky" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Sky"]
+texture = ExtResource("1_lxb4d")
+
+[node name="Forest_9" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.2, 0.2)
+repeat_size = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Forest_9"]
+texture = ExtResource("9_x6o38")
+
+[node name="Forest_8" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.3, 0.3)
+repeat_size = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Forest_8"]
+texture = ExtResource("8_4x083")
+
+[node name="Forest_7" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.4, 0.4)
+repeat_size = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Forest_7"]
+texture = ExtResource("7_n1iae")
+
+[node name="Forest_6" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.5, 0.5)
+repeat_size = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Forest_6"]
+texture = ExtResource("6_xatck")
+
+[node name="Particle_5" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.6, 0.6)
+repeat_size = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Particle_5"]
+texture = ExtResource("5_1sv6d")
+
+[node name="Forest_4" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.7, 0.7)
+repeat_size = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Forest_4"]
+texture = ExtResource("4_0magv")
+
+[node name="Particles_3" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.8, 0.8)
+repeat_size = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Particles_3"]
+texture = ExtResource("3_ob266")
+
+[node name="Bushes" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.9, 0.9)
+repeat_size = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Bushes"]
+texture = ExtResource("2_3c8kk")
+
+[node name="Mist" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.95, 0.95)
+repeat_size = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Mist"]
+position = Vector2(6, 0)
+texture = ExtResource("1_g5lxi")

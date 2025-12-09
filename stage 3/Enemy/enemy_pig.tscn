@@ -125,10 +125,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mu7eq"]
-size = Vector2(30, 27)
+size = Vector2(23, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_apfpj"]
-size = Vector2(24, 23)
+size = Vector2(20, 18)
 
 [node name="Enemy_Pig" type="Node2D"]
 
@@ -143,9 +143,8 @@ frame_progress = 0.18917878
 [node name="Kill_Zone" parent="Pig" instance=ExtResource("2_nqc1x")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pig/Kill_Zone"]
-position = Vector2(1, -0.5)
 shape = SubResource("RectangleShape2D_mu7eq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pig"]
-position = Vector2(0, 0.5)
+position = Vector2(1, 4)
 shape = SubResource("RectangleShape2D_apfpj")

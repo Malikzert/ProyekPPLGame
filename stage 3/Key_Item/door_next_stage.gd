@@ -9,7 +9,8 @@ var entering := false
 @onready var sprite: Sprite2D = $Sprite2D
 
 
-func _on_area_2d_body_entered(body):
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
 	print("something enterred")
 	if entering:
 		return  # biar tidak double trigger
@@ -17,7 +18,8 @@ func _on_area_2d_body_entered(body):
 	if body.name == "Player":
 		print("body enterd")
 		entering = true
-		_start_transition()
+		_start_transition() # Replace with function body.
+
 
 
 func _start_transition():

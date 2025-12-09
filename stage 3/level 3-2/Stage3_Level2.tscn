@@ -1,5 +1,6 @@
-[gd_scene load_steps=17 format=4 uid="uid://c1nhb57odhwkw"]
+[gd_scene load_steps=18 format=4 uid="uid://c1nhb57odhwkw"]
 
+[ext_resource type="PackedScene" uid="uid://5vj00nkpxyu1" path="res://stage 3/Background/parallax_background.tscn" id="1_kxatl"]
 [ext_resource type="Texture2D" uid="uid://b8cf2r0tb48yk" path="res://assets/brackeys_platformer_assets/sprites/world_tileset.png" id="1_t0gcq"]
 [ext_resource type="PackedScene" uid="uid://d2ovwm7fu0e77" path="res://main_menu/scenes/kill_zone.tscn" id="1_xv65w"]
 [ext_resource type="PackedScene" uid="uid://ctfd4fjb2avnw" path="res://stage 3/Player/Player.tscn" id="2_xv65w"]
@@ -156,6 +157,21 @@ texture = ExtResource("1_t0gcq")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_orqc2")
 
+[sub_resource type="Animation" id="Animation_orqc2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(833, -80)]
+}
+
 [sub_resource type="Animation" id="Animation_ow4x6"]
 resource_name = "new_animation"
 length = 3.0
@@ -173,21 +189,6 @@ tracks/0/keys = {
 "values": [Vector2(833, -80), Vector2(935, -80), Vector2(833, -79)]
 }
 
-[sub_resource type="Animation" id="Animation_orqc2"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(833, -80)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wohnf"]
 _data = {
 &"RESET": SubResource("Animation_orqc2"),
@@ -195,6 +196,10 @@ _data = {
 }
 
 [node name="Stage3Level2" type="Node2D"]
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_kxatl")]
+position = Vector2(577, -169)
+scale = Vector2(0.6, 0.6)
 
 [node name="Kill_Zone" parent="." instance=ExtResource("1_xv65w")]
 
@@ -207,7 +212,7 @@ tile_map_data = PackedByteArray("AAAAAP3/AAAHAAEAAAABAP3/AAAHAAEAAAACAP3/AAAHAAE
 tile_set = SubResource("TileSet_wohnf")
 
 [node name="Player" parent="." instance=ExtResource("2_xv65w")]
-position = Vector2(702, -261)
+position = Vector2(51, -76)
 
 [node name="Camera2D" parent="Player" instance=ExtResource("3_ow4x6")]
 position = Vector2(0, -87)

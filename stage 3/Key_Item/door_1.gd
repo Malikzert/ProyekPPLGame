@@ -23,7 +23,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	print("Player enter area")
 
 	if try_open(body):
-
 		# ANIMASI MULTI-EFEK
 		var tween = create_tween()
 		tween.set_parallel(true)  # jalankan animasi bersamaan
