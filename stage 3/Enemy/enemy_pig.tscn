@@ -1,8 +1,8 @@
 [gd_scene load_steps=23 format=3 uid="uid://drvjchcd2kugl"]
 
 [ext_resource type="Script" uid="uid://b4bmu3q45iu18" path="res://stage 3/Enemy/pig.gd" id="1_nqc1x"]
-[ext_resource type="Texture2D" uid="uid://c8ssuh3c1fbr2" path="res://assets/Enemies/AngryPig/Walk (36x30).png" id="1_pyu7g"]
-[ext_resource type="PackedScene" uid="uid://d2ovwm7fu0e77" path="res://main_menu/scenes/kill_zone.tscn" id="2_nqc1x"]
+[ext_resource type="Texture2D" uid="uid://c8ssuh3c1fbr2" path="res://stage 3/assets/Enemies/AngryPig/Walk (36x30).png" id="1_pyu7g"]
+[ext_resource type="PackedScene" uid="uid://d2ovwm7fu0e77" path="res://stage 3/kill_zone.tscn" id="2_nqc1x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_apfpj"]
 atlas = ExtResource("1_pyu7g")

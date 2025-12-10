@@ -1,10 +1,10 @@
 [gd_scene load_steps=13 format=4 uid="uid://cexkhrtel524y"]
 
 [ext_resource type="PackedScene" uid="uid://ctfd4fjb2avnw" path="res://stage 3/Player/Player.tscn" id="1_egygj"]
-[ext_resource type="Texture2D" uid="uid://b8cf2r0tb48yk" path="res://assets/brackeys_platformer_assets/sprites/world_tileset.png" id="2_0vps2"]
+[ext_resource type="Texture2D" uid="uid://b8cf2r0tb48yk" path="res://stage 3/assets/brackeys_platformer_assets/sprites/world_tileset.png" id="2_0vps2"]
 [ext_resource type="PackedScene" uid="uid://bygmfbo6uawry" path="res://stage 3/camera_2d.tscn" id="2_s2ffg"]
 [ext_resource type="PackedScene" uid="uid://5vj00nkpxyu1" path="res://stage 3/Background/parallax_background.tscn" id="3_3w2uk"]
-[ext_resource type="PackedScene" uid="uid://d2ovwm7fu0e77" path="res://main_menu/scenes/kill_zone.tscn" id="4_s2ffg"]
+[ext_resource type="PackedScene" uid="uid://d2ovwm7fu0e77" path="res://stage 3/kill_zone.tscn" id="4_s2ffg"]
 [ext_resource type="PackedScene" uid="uid://bfx8t7d67ydnm" path="res://stage 3/Platfrom/platform.tscn" id="5_eyr74"]
 [ext_resource type="PackedScene" uid="uid://cy1odsblyb6i1" path="res://stage 3/Enemy/chain_show.tscn" id="7_e5h0i"]
 [ext_resource type="PackedScene" uid="uid://cqjpxepgluhgu" path="res://stage 3/Enemy/spike.tscn" id="8_n8awh"]

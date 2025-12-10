@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://co62n2pgae45u"]
 
 [ext_resource type="Script" uid="uid://kr2eylkvxnv7" path="res://stage 3/Key_Item/door_next_stage.gd" id="1_10l0n"]
-[ext_resource type="Texture2D" uid="uid://dcius8jmgfcf1" path="res://assets/Medieval_Castle_Asset_Pack/Decorations/door.png" id="1_elgjl"]
+[ext_resource type="Texture2D" uid="uid://dcius8jmgfcf1" path="res://stage 3/assets/Medieval_Castle_Asset_Pack/Decorations/door.png" id="1_elgjl"]
 [ext_resource type="Script" uid="uid://dl1bq3rjsk8u3" path="res://stage 3/Key_Item/area_next_stage.gd" id="3_10l0n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ejm1u"]

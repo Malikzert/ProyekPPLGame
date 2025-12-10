@@ -1,8 +1,10 @@
-[gd_scene load_steps=34 format=3 uid="uid://ctfd4fjb2avnw"]
+[gd_scene load_steps=48 format=3 uid="uid://ctfd4fjb2avnw"]
 
 [ext_resource type="Texture2D" uid="uid://cgac7c37hnolj" path="res://assets/gambar/spr_player_idle_strip5.png" id="1_cda3u"]
+[ext_resource type="Texture2D" uid="uid://ojqu44dpp2o0" path="res://assets/gambar/spr_player_death_strip8.png" id="1_vppi5"]
 [ext_resource type="Texture2D" uid="uid://dthjfnxbjs67h" path="res://assets/gambar/spr_player_run_strip9.png" id="2_uad78"]
 [ext_resource type="Texture2D" uid="uid://buav7vswhqo7u" path="res://assets/gambar/spr_player_jump_strip12.png" id="3_g05pp"]
+[ext_resource type="Texture2D" uid="uid://daigl4fqc7qol" path="res://assets/gambar/spr_player_hurt_strip4.png" id="5_r5wr7"]
 
 [sub_resource type="GDScript" id="GDScript_cda3u"]
 resource_name = "player_movement"
@@ -11,6 +13,7 @@ script/source = "extends CharacterBody2D
 const SPEED = 150.0
 const JUMP_VELOCITY = -300.0
 const MAX_AIR_JUMP = 1
+
 @onready var timer: Timer = $Timer
 
 var air_jumps = 0
@@ -20,32 +23,49 @@ signal hp_changed(new_hp)
 @export var max_hp: int = 5
 @export var health_ui: Control
 
+var is_dead: bool = false
+var is_taking_damage: bool = false
+
 var hp: int = max_hp
 
 func _ready():
-	print(\"Mencari HealthUI...\")
-	# Cek apakah Global Variable ini ada isinya
-	print(\"HealthUI Object: \", HealthUI) 
-	
 	if HealthUI:
-		print(\"HealthUI ditemukan! Mengupdate hati...\")
 		HealthUI.update_hearts(hp)
 	else:
-		push_error(\"HealthUI bernilai NULL! Cek Project Settings > Autoload.\")
+		push_error(\"HealthUI error\")
 		
 	emit_signal(\"hp_changed\", hp)
 
 func take_damage(amount: int):
+	if is_dead:
+		return
+	
 	hp = clamp(hp - amount, 0, max_hp)
 	emit_signal(\"hp_changed\", hp)
 
-	HealthUI.update_hearts(hp)
+	if HealthUI:
+		HealthUI.update_hearts(hp)
 
 	if hp <= 0:
 		die()
+	else:
+		is_taking_damage = true
+		$AnimatedSprite2D.play(\"hitted\")
+		
+		velocity.y = -150
+		if $AnimatedSprite2D.flip_h:
+			velocity.x = 100
+		else:
+			velocity.x = -100
+			
+		await $AnimatedSprite2D.animation_finished
+		
+		is_taking_damage = false
 
 func die():
-	print(\"Player mati.\")
+	is_dead = true
+	velocity.x = 0
+	$AnimatedSprite2D.play(\"death\")
 	timer.start()
 
 func _physics_process(delta: float) -> void:
@@ -54,6 +74,10 @@ func _physics_process(delta: float) -> void:
 
 	if is_on_floor():
 		air_jumps = 0
+	
+	if is_dead or is_taking_damage:
+		move_and_slide()
+		return
 
 	if Input.is_action_just_pressed(\"move_up\"):
 		if is_on_floor():
@@ -87,8 +111,56 @@ func _on_timer_timeout() -> void:
 	get_tree().reload_current_scene()
 "
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5wr7"]
+atlas = ExtResource("1_vppi5")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sitmj"]
+atlas = ExtResource("1_vppi5")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0oyxn"]
+atlas = ExtResource("1_vppi5")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwc8u"]
+atlas = ExtResource("1_vppi5")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_536x3"]
+atlas = ExtResource("1_vppi5")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_286r7"]
+atlas = ExtResource("1_vppi5")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rfs2t"]
+atlas = ExtResource("1_vppi5")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6n53u"]
+atlas = ExtResource("1_vppi5")
+region = Rect2(448, 0, 64, 64)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_lcbjc"]
 atlas = ExtResource("3_g05pp")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6705"]
+atlas = ExtResource("5_r5wr7")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svlfj"]
+atlas = ExtResource("5_r5wr7")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iny7e"]
+atlas = ExtResource("5_r5wr7")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_btkhn"]
+atlas = ExtResource("5_r5wr7")
 region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uad78"]
@@ -199,11 +271,57 @@ region = Rect2(512, 0, 64, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_r5wr7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sitmj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0oyxn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fwc8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_536x3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_286r7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rfs2t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6n53u")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_lcbjc")
 }],
 "loop": true,
 "name": &"fall",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6705")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svlfj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iny7e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_btkhn")
+}],
+"loop": false,
+"name": &"hitted",
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -311,15 +429,17 @@ script = SubResource("GDScript_cda3u")
 position = Vector2(1, -2)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_lcbjc")
-animation = &"idle"
+animation = &"hitted"
 autoplay = "idle"
+frame = 3
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, 1)
 shape = SubResource("CapsuleShape2D_g05pp")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.6
+wait_time = 2.0
 one_shot = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

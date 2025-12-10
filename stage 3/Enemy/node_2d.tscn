@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://beu1wkjhq6xy3"]
 
 [ext_resource type="Script" uid="uid://cfynwpdg428wj" path="res://stage 3/Enemy/enemy_slime.gd" id="1_1lpml"]
-[ext_resource type="Texture2D" uid="uid://dp0pamxoaxced" path="res://assets/brackeys_platformer_assets/sprites/slime_green.png" id="1_h7gvj"]
-[ext_resource type="PackedScene" uid="uid://d2ovwm7fu0e77" path="res://main_menu/scenes/kill_zone.tscn" id="3_wtrpf"]
+[ext_resource type="Texture2D" uid="uid://dp0pamxoaxced" path="res://stage 3/assets/brackeys_platformer_assets/sprites/slime_green.png" id="1_h7gvj"]
+[ext_resource type="PackedScene" uid="uid://d2ovwm7fu0e77" path="res://stage 3/kill_zone.tscn" id="3_wtrpf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1lpml"]
 atlas = ExtResource("1_h7gvj")

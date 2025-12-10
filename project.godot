@@ -28,7 +28,7 @@ move_right={
 
 [autoload]
 
-HealthUI="*res://main_menu/health_point.tscn"
+HealthUI="*res://stage 3/HealthUI/health_point.tscn"
 
 [input]
 
