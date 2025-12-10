@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bfx8t7d67ydnm" path="res://stage 3/Platfrom/platform.tscn" id="5_skinw"]
 [ext_resource type="Texture2D" uid="uid://dq31150cov580" path="res://stage 3/assets/swamp-asset/3 Objects/Stones/2.png" id="6_6306a"]
 [ext_resource type="PackedScene" uid="uid://bd7jkf8yxq6jq" path="res://stage 3/key.tscn" id="6_kh737"]
-[ext_resource type="PackedScene" uid="uid://d2ovwm7fu0e77" path="res://stage 3/kill_zone.tscn" id="7_ghevf"]
+[ext_resource type="PackedScene" uid="uid://d2ovwm7fu0e77" path="res://stage 3/Player/kill_zone.tscn" id="7_ghevf"]
 [ext_resource type="PackedScene" uid="uid://beu1wkjhq6xy3" path="res://stage 3/Enemy/node_2d.tscn" id="10_4iqqq"]
 [ext_resource type="PackedScene" uid="uid://cnur244omvsa5" path="res://stage 3/Key_Item/door_1.tscn" id="10_uux7j"]
 [ext_resource type="PackedScene" uid="uid://5vj00nkpxyu1" path="res://stage 3/Background/parallax_background.tscn" id="12_hwhih"]

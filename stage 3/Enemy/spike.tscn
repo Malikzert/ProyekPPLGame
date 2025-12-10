@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cqjpxepgluhgu"]
 
 [ext_resource type="Texture2D" uid="uid://dbbb0dyrliksw" path="res://stage 3/assets/Adventure_pack/Traps/Spikes/Idle.png" id="1_0486u"]
-[ext_resource type="PackedScene" uid="uid://cpcrqynscsf6x" path="res://main_menu/damage_zone.tscn" id="2_0486u"]
+[ext_resource type="PackedScene" uid="uid://cpcrqynscsf6x" path="res://stage 3/Player/damage_zone.tscn" id="2_0486u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hwplw"]
 size = Vector2(13, 7)
