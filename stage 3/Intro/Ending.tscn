@@ -1,0 +1,87 @@
+[gd_scene load_steps=8 format=3 uid="uid://bre6f6mq4l3m5"]
+
+[ext_resource type="FontFile" uid="uid://bbyoksnyresbu" path="res://assets/fonts/PressStart2P-Regular.ttf" id="1_iv660"]
+[ext_resource type="Script" uid="uid://d1pvd4waij27i" path="res://stage 3/Intro/button_main_menu.gd" id="2_c4pf6"]
+
+[sub_resource type="Theme" id="Theme_iv660"]
+default_font = ExtResource("1_iv660")
+
+[sub_resource type="LabelSettings" id="LabelSettings_c4pf6"]
+line_spacing = 5.0
+paragraph_spacing = 10.0
+font = ExtResource("1_iv660")
+font_size = 33
+font_color = Color(0.2615482, 0.5649363, 0.49592, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c4pf6"]
+bg_color = Color(0.909894, 0.6833718, 0.6368531, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iv660"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(0.82415783, 0.50123316, 0.43906504, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="Theme" id="Theme_c4pf6"]
+Button/styles/hover = SubResource("StyleBoxFlat_c4pf6")
+Button/styles/normal = SubResource("StyleBoxFlat_iv660")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+theme = SubResource("Theme_iv660")
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Green returns, 
+and the world feels alive again."
+label_settings = SubResource("LabelSettings_c4pf6")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
+theme = SubResource("Theme_c4pf6")
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+action_mode = 0
+text = "Main Menu"
+autowrap_trim_flags = 0
+icon_alignment = 1
+script = ExtResource("2_c4pf6")
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="CenterContainer/VBoxContainer/Button" method="_on_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://cexkhrtel524y"]
+[gd_scene load_steps=16 format=4 uid="uid://cexkhrtel524y"]
 
 [ext_resource type="PackedScene" uid="uid://ctfd4fjb2avnw" path="res://stage 3/Player/Player.tscn" id="1_egygj"]
 [ext_resource type="Texture2D" uid="uid://b8cf2r0tb48yk" path="res://stage 3/assets/brackeys_platformer_assets/sprites/world_tileset.png" id="2_0vps2"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cqjpxepgluhgu" path="res://stage 3/Enemy/spike.tscn" id="8_n8awh"]
 [ext_resource type="PackedScene" uid="uid://bkvw027my0pmm" path="res://stage 3/Enemy/world_kill_Zone.tscn" id="9_3w2uk"]
 [ext_resource type="PackedScene" uid="uid://co62n2pgae45u" path="res://stage 3/Key_Item/door_next_stage.tscn" id="9_m7hsc"]
+[ext_resource type="PackedScene" uid="uid://c358qanf73o3l" path="res://stage 3/Intro/canvas_layer_intro.tscn" id="10_3w2uk"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_3w2uk"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -259,7 +260,6 @@ position = Vector2(485, -209)
 rotation = 3.1415927
 
 [node name="Door" parent="." instance=ExtResource("9_m7hsc")]
-z_index = -1
 position = Vector2(212, -121)
 scale = Vector2(2, 2)
 next_stage_path = "res://stage 3/level 3-2/Stage3_Level2.tscn"
@@ -288,4 +288,7 @@ collision_layer = 64
 position = Vector2(1379, 55)
 
 [node name="Area2D" parent="." instance=ExtResource("9_3w2uk")]
-position = Vector2(717, 156)
+position = Vector2(717, 155)
+
+[node name="CanvasLayer" parent="." instance=ExtResource("10_3w2uk")]
+stage_name = "STAGE 3-1"

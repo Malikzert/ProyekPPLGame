@@ -29,6 +29,7 @@ move_right={
 [autoload]
 
 HealthUI="*res://stage 3/HealthUI/health_point.tscn"
+Global3="*res://stage 3/Global_3.gd"
 
 [input]
 
