@@ -53,7 +53,7 @@ Proyek ini merupakan hasil **kolaborasi tim**, yang menekankan pada manajemen ko
    git clone [https://github.com/Malikzert/ProyekPPLGame.git](https://github.com/Malikzert/ProyekPPLGame.git)
 
 ```
-
+```
 2. **Download Godot**:
 Pastikan Anda menggunakan **Godot Engine 4.x** (sesuaikan dengan versi yang tim gunakan).
 3. **Import Project**:
