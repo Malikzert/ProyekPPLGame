@@ -67,14 +67,45 @@ Tekan `F5` untuk menjalankan game dari scene utama.
 
 ---
 
-## 👥 Kontributor (Tim PPL)
+## 👥 Kontributor (Tim PPL - Kelompok [Isi No Kelompok])
 
-Terima kasih kepada seluruh anggota tim yang telah berkontribusi dalam pengembangan Eco Runner:
+Proyek **Eco Runner: Save the Forest** dikembangkan secara kolaboratif oleh:
 
-* **[Nama Kamu/Malikzert]** - [Role kamu, misal: Lead Programmer]
-* **[Nama Teman 1]** - [Role, misal: Asset Designer]
-* **[Nama Teman 2]** - [Role, misal: Level Designer]
-*(Silakan edit bagian ini sesuai anggota tim aslimu!)*
+### 1. Programmer
+**Abdul Malik Adz-Dzikri (230411100136)**
+- **Tanggung Jawab**: Implementasi teknis dan manajemen sistem permainan.
+- **Tugas**: 
+  - Mengembangkan logika game menggunakan **GDScript (Godot Engine)**.
+  - Implementasi mekanisme utama: pergerakan, sistem extinguish api, dan *victory condition*.
+  - Integrasi aset (sprite, animasi, audio) dan pengelolaan struktur scene.
+  - *Bug fixing* dan manajemen repository GitHub (Merge & Pull Requests).
+
+### 2. Game Designer
+**Ivan Roisus Salam (230411100206)**
+- **Tanggung Jawab**: Perancangan pengalaman bermain dan narasi.
+- **Tugas**: 
+  - Mendesain konsep gameplay, mekanik rintangan, dan progres level.
+  - Menentukan alur cerita dan tema *Eco Runner: Save the Forest*.
+  - *Level Design*: Mengatur tata letak elemen interaktif di Season Savanna & Rainforest.
+  - Menyusun *Game Design Document* (GDD) sebagai panduan tim.
+
+### 3. Visual Artist
+**Hanin (230411100005)**
+- **Tanggung Jawab**: Produksi seluruh komponen visual dan estetika.
+- **Tugas**: 
+  - Membuat aset pixel art: karakter, latar belakang (background), dan tilemap.
+  - Mendesain UI/UX (Menu, indikator health, victory screen).
+  - Mengelola format dan atlas sprite agar kompatibel dengan Godot.
+  - Menjaga konsistensi visual sesuai tema konservasi hutan.
+
+### 4. Tester
+**Roky Zofyan Amirullah (230411100205)**
+- **Tanggung Jawab**: Penjaminan kualitas (Quality Assurance) dan stabilitas.
+- **Tugas**: 
+  - Melakukan pengujian fungsional dan mencatat bug mekanik/script.
+  - *Stress test* untuk memastikan performa game tetap stabil.
+  - Menyusun laporan pengujian dan rekomendasi perbaikan *playability*.
+  - Memastikan game bebas dari *crash* sebelum dirilis.
 
 ---
 
